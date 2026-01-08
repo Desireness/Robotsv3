@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robótica - Nueva Web</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav id="navbar">
+  <ul class="navbar-items flexbox-col">
+    <li class="navbar-logo flexbox-left">
+      <a class="navbar-item-inner flexbox">
+        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 1438.88 1819.54">
+          <polygon points="925.79 318.48 830.56 0 183.51 1384.12 510.41 1178.46 925.79 318.48"/>
+          <polygon points="1438.88 1663.28 1126.35 948.08 111.98 1586.26 0 1819.54 1020.91 1250.57 1123.78 1471.02 783.64 1663.28 1438.88 1663.28"/>
+        </svg>
+      </a>
+    </li>
+    <li class="navbar-item flexbox-left">
+      <a class="navbar-item-inner flexbox-left">
+        <div class="navbar-item-inner-icon-wrapper flexbox">
+          <ion-icon name="search-outline"></ion-icon>
+        </div>
+        <span class="link-text">Search</span>
+      </a>
+    </li>
+    <li class="navbar-item flexbox-left">
+      <a class="navbar-item-inner flexbox-left" onclick="showSection('home')" style="cursor: pointer;">
+        <div class="navbar-item-inner-icon-wrapper flexbox">
+          <ion-icon name="home-outline"></ion-icon>
+        </div>
+        <span class="link-text">Home</span>
+      </a>
+    </li>
+    <li class="navbar-item flexbox-left">
+      <a class="navbar-item-inner flexbox-left">
+        <div class="navbar-item-inner-icon-wrapper flexbox">
+          <ion-icon name="folder-open-outline"></ion-icon>
+        </div>
+        <span class="link-text">Projects</span>
+      </a>
+    </li>
+    <li class="navbar-item flexbox-left">
+      <a class="navbar-item-inner flexbox-left">
+        <div class="navbar-item-inner-icon-wrapper flexbox">
+          <ion-icon name="pie-chart-outline"></ion-icon>
+        </div>
+        <span class="link-text">Dashboard</span>
+      </a>
+    </li>
+    <li class="navbar-item flexbox-left">
+      <a class="navbar-item-inner flexbox-left">
+        <div class="navbar-item-inner-icon-wrapper flexbox">
+          <ion-icon name="people-outline"></ion-icon>
+        </div>
+        <span class="link-text">Team</span>
+      </a>
+    </li>
+    <li class="navbar-item flexbox-left">
+      <a class="navbar-item-inner flexbox-left">
+        <div class="navbar-item-inner-icon-wrapper flexbox">
+          <ion-icon name="chatbubbles-outline"></ion-icon>
+        </div>
+        <span class="link-text">Support</span>
+      </a>
+    </li>
+    <li class="navbar-item flexbox-left">
+      <a class="navbar-item-inner flexbox-left">
+        <div class="navbar-item-inner-icon-wrapper flexbox">
+          <ion-icon name="settings-outline"></ion-icon>
+        </div>
+        <span class="link-text">Settings</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+  <!-- Main -->
+  <main id="main" class="flexbox-col">
+    
+    <!-- Sección Home -->
+    <section id="home" class="section active">
+      <h2>Lecciones de Robótica</h2>
+      <p>Selecciona una lección para comenzar</p>
+      <div class="hero-image">
+        
+      </div>
+      <div class="lessons-grid">
+        <div class="lesson-card" onclick="showSection('lesson-kit')">
+          <div class="lesson-icon">📘</div>
+          <h3>Introducción al nuevo kit</h3>
+          <p>Componentes, seguridad y conexiones básicas</p>
+        </div>
+        <div class="lesson-card" onclick="showSection('lesson-servo')">
+          <div class="lesson-icon">🤖</div>
+          <h3>Motores servo</h3>
+          <p>Control de posición y movimiento con servos</p>
+        </div>
+        <div class="lesson-card" onclick="showSection('lesson-leds')">
+          <div class="lesson-icon">💡</div>
+          <h3>LEDs</h3>
+          <p>Encendido, parpadeo y patrones de luz</p>
+        </div>
+        <div class="lesson-card" onclick="showSection('lesson-switch')">
+          <div class="lesson-icon">🔀</div>
+          <h3>Switch con sensor</h3>
+          <p>Entrada digital y lectura de estados</p>
+        </div>
+        <div class="lesson-card" onclick="showSection('lesson-photoled')">
+          <div class="lesson-icon">🌞</div>
+          <h3>LED con fotosensor</h3>
+          <p>Control de brillo según la luz ambiente</p>
+        </div>
+        <div class="lesson-card" onclick="showSection('lesson-ultrasonic')">
+          <div class="lesson-icon">📏</div>
+          <h3>Distancia ultrasónica</h3>
+          <p>Medición de distancia con sensor HC-SR04</p>
+        </div>
+        <div class="lesson-card" onclick="showSection('lesson-soil')">
+          <div class="lesson-icon">🌱</div>
+          <h3>Detección de suelo</h3>
+          <p>Lectura de humedad del suelo</p>
+        </div>
+        <div class="lesson-card" onclick="showSection('lesson-temperature')">
+          <div class="lesson-icon">🌡️</div>
+          <h3>Detección de temperatura</h3>
+          <p>Medición con sensores de temperatura</p>
+        </div>
+        <div class="lesson-card" onclick="showSection('lesson-final')">
+          <div class="lesson-icon">🏆</div>
+          <h3>Proyecto final</h3>
+          <p>Integra todo en un proyecto completo</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lección: Introducción al nuevo kit -->
+    <section id="lesson-kit" class="section">
+      <button class="back-btn" onclick="showSection('home')">← Volver</button>
+      <h2>Introducción al nuevo kit</h2>
+      
+      <div class="lesson-intro">
+        <p class="intro-highlight">
+          Como podréis comprobar, este kit es nuevo, y necesito que tengáis cuidado al usarlo: <strong>en primer lugar</strong> para mantenerlo en buen estado y <strong>en segundo lugar</strong> para evitar accidentes.
+        </p>
+      </div>
+
+      <div class="lesson-content">
+        <h3>📦 Componentes del kit</h3>
+        <p class="centered-text">El kit incluye los siguientes componentes para tus proyectos de robótica:</p>
+        <ul class="components-list">
+          <li><span class="component-qty">2×</span> Sensores seguidores de línea</li>
+          <li><span class="component-qty">1×</span> Sensor de luz</li>
+          <li><span class="component-qty">2×</span> Ruedas</li>
+          <li><span class="component-qty">1×</span> Sensor de presencia PIR</li>
+          <li><span class="component-qty">2×</span> Motores servo de 180°</li>
+          <li><span class="component-qty">2×</span> Motores servo de 360°</li>
+          <li><span class="component-qty">1×</span> Módulo sensor de humedad de tierra</li>
+          <li><span class="component-qty">1×</span> Sensor ultrasónico Gravity</li>
+        </ul>
+      </div>
+
+      <div class="section-gallery">
+        <div class="img-slot"><img src="images/Tarjeta Expansion.webp" alt="Imagen 1 - Introducción al nuevo kit"></div>
+        <div class="img-slot"><img src="images/servo180.webp" alt="Imagen 2 - Introducción al nuevo kit"></div>
+        <div class="img-slot"><img src="images/led.webp" alt="Imagen 3 - Introducción al nuevo kit"></div>
+        <div class="img-slot"><img src="images/sensortemperatura.webp" alt="Imagen 4 - Introducción al nuevo kit"></div>
+        <div class="img-slot"><img src="images/sensorultrasonido.webp" alt="Imagen 5 - Introducción al nuevo kit"></div>
+      </div>
+
+      <div class="lesson-content rules-section">
+        <h3>⚠️ Reglas básicas de seguridad</h3>
+        <ul class="rules-list">
+          <li><strong>Mantener el kit organizado:</strong> Todos los componentes deben estar en buen estado y guardados correctamente</li>
+          <li><strong>No jugar con herramientas:</strong> El destornillador es una herramienta de trabajo, no un juguete</li>
+          <li><strong>Cuidado con el material:</strong> No morder ni maltratar ningún componente del kit</li>
+          <li><strong>Identificación:</strong> Tener siempre visible vuestro nombre en el kit</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Lección: Motores servo -->
+    <section id="lesson-servo" class="section">
+      <button class="back-btn" onclick="showSection('home')">← Volver</button>
+      <h2>Motores servo</h2>
+      
+      <div class="lesson-intro">
+        <p class="intro-highlight">
+          <strong>Proyecto 2 - Servo de 180 grados</strong>
+        </p>
+      </div>
+
+      <div class="lesson-content">
+        <h3>📋 Primer proyecto motores </h3>
+        <p class="project-description">
+          Controla uno de los motores servo (180 grados) para rotar desde 10 grados hasta 170 grados, y luego desde 170 grados nuevamente a 10 grados.
+        </p>
+        <br>
+        <br>
+        <p> Usaremos la tarjeta de expansión "MO27.000484" </p>
+      </div>
+
+      <div class="section-gallery">
+        <div class="img-slot"><img src="" alt="Imagen 1 - Motores servo"></div>
+        <div class="img-slot"><img src="" alt="Imagen 2 - Motores servo"></div>
+        <div class="img-slot"><img src="" alt="Imagen 3 - Motores servo"></div>
+        <div class="img-slot"><img src="" alt="Imagen 4 - Motores servo"></div>
+        <div class="img-slot"><img src="" alt="Imagen 5 - Motores servo"></div>
+      </div>
+    </section>
+
+    <!-- Lección: LEDs -->
+    <section id="lesson-leds" class="section">
+      <button class="back-btn" onclick="showSection('home')">← Volver</button>
+      <h2>LEDs</h2>
+      <p>Control básico y avanzado de LEDs:</p>
+      <ul>
+        <li>Encendido y parpadeo</li>
+        <li>Patrones de luz</li>
+        <li>Resistencias y seguridad</li>
+      </ul>
+      <div class="section-gallery">
+        <div class="img-slot"><img src="" alt="Imagen 1 - LEDs"></div>
+        <div class="img-slot"><img src="" alt="Imagen 2 - LEDs"></div>
+        <div class="img-slot"><img src="" alt="Imagen 3 - LEDs"></div>
+        <div class="img-slot"><img src="" alt="Imagen 4 - LEDs"></div>
+        <div class="img-slot"><img src="" alt="Imagen 5 - LEDs"></div>
+      </div>
+    </section>
+
+    <!-- Lección: Switch con sensor -->
+    <section id="lesson-switch" class="section">
+      <button class="back-btn" onclick="showSection('home')">← Volver</button>
+      <h2>Switch con sensor</h2>
+      <p>Lectura de entradas digitales:</p>
+      <ul>
+        <li>Pull-up/Pull-down</li>
+        <li>Rebote (debounce)</li>
+        <li>Acciones según estado</li>
+      </ul>
+      <div class="section-gallery">
+        <div class="img-slot"><img src="" alt="Imagen 1 - Switch con sensor"></div>
+        <div class="img-slot"><img src="" alt="Imagen 2 - Switch con sensor"></div>
+        <div class="img-slot"><img src="" alt="Imagen 3 - Switch con sensor"></div>
+        <div class="img-slot"><img src="" alt="Imagen 4 - Switch con sensor"></div>
+        <div class="img-slot"><img src="" alt="Imagen 5 - Switch con sensor"></div>
+      </div>
+    </section>
+
+    <!-- Lección: LED con fotosensor -->
+    <section id="lesson-photoled" class="section">
+      <button class="back-btn" onclick="showSection('home')">← Volver</button>
+      <h2>LED con fotosensor</h2>
+      <p>Control de brillo según la luz ambiente:</p>
+      <ul>
+        <li>Lectura analógica del LDR</li>
+        <li>Mapeo de valores a PWM</li>
+        <li>Filtrado de ruido</li>
+      </ul>
+      <div class="section-gallery">
+        <div class="img-slot"><img src="" alt="Imagen 1 - LED con fotosensor"></div>
+        <div class="img-slot"><img src="" alt="Imagen 2 - LED con fotosensor"></div>
+        <div class="img-slot"><img src="" alt="Imagen 3 - LED con fotosensor"></div>
+        <div class="img-slot"><img src="" alt="Imagen 4 - LED con fotosensor"></div>
+        <div class="img-slot"><img src="" alt="Imagen 5 - LED con fotosensor"></div>
+      </div>
+    </section>
+
+    <!-- Lección: Distancia ultrasónica -->
+    <section id="lesson-ultrasonic" class="section">
+      <button class="back-btn" onclick="showSection('home')">← Volver</button>
+      <h2>Distancia ultrasónica</h2>
+      <p>Medición con sensor HC-SR04:</p>
+      <ul>
+        <li>Trigger y Echo</li>
+        <li>Cálculo de distancia</li>
+        <li>Integración en proyectos</li>
+      </ul>
+      <div class="section-gallery">
+        <div class="img-slot"><img src="" alt="Imagen 1 - Distancia ultrasónica"></div>
+        <div class="img-slot"><img src="" alt="Imagen 2 - Distancia ultrasónica"></div>
+        <div class="img-slot"><img src="" alt="Imagen 3 - Distancia ultrasónica"></div>
+        <div class="img-slot"><img src="" alt="Imagen 4 - Distancia ultrasónica"></div>
+        <div class="img-slot"><img src="" alt="Imagen 5 - Distancia ultrasónica"></div>
+      </div>
+    </section>
+
+    <!-- Lección: Detección de suelo -->
+    <section id="lesson-soil" class="section">
+      <button class="back-btn" onclick="showSection('home')">← Volver</button>
+      <h2>Detección de suelo</h2>
+      <p>Lectura de humedad del suelo:</p>
+      <ul>
+        <li>Sensor capacitivo vs resistivo</li>
+        <li>Umbrales de riego</li>
+        <li>Alertas y acciones</li>
+      </ul>
+      <div class="section-gallery">
+        <div class="img-slot"><img src="" alt="Imagen 1 - Detección de suelo"></div>
+        <div class="img-slot"><img src="" alt="Imagen 2 - Detección de suelo"></div>
+        <div class="img-slot"><img src="" alt="Imagen 3 - Detección de suelo"></div>
+        <div class="img-slot"><img src="" alt="Imagen 4 - Detección de suelo"></div>
+        <div class="img-slot"><img src="" alt="Imagen 5 - Detección de suelo"></div>
+      </div>
+    </section>
+
+    <!-- Lección: Detección de temperatura -->
+    <section id="lesson-temperature" class="section">
+      <button class="back-btn" onclick="showSection('home')">← Volver</button>
+      <h2>Detección de temperatura</h2>
+      <p>Medición con sensores (ej. LM35/DS18B20):</p>
+      <ul>
+        <li>Lectura y conversión</li>
+        <li>Promedios y estabilidad</li>
+        <li>Visualización de datos</li>
+      </ul>
+      <div class="section-gallery">
+        <div class="img-slot"><img src="" alt="Imagen 1 - Detección de temperatura"></div>
+        <div class="img-slot"><img src="" alt="Imagen 2 - Detección de temperatura"></div>
+        <div class="img-slot"><img src="" alt="Imagen 3 - Detección de temperatura"></div>
+        <div class="img-slot"><img src="" alt="Imagen 4 - Detección de temperatura"></div>
+        <div class="img-slot"><img src="" alt="Imagen 5 - Detección de temperatura"></div>
+      </div>
+    </section>
+
+    <!-- Lección: Proyecto final -->
+    <section id="lesson-final" class="section">
+      <button class="back-btn" onclick="showSection('home')">← Volver</button>
+      <h2>Proyecto final</h2>
+      <p>Integra conocimientos en un proyecto completo:</p>
+      <ul>
+        <li>Definición del objetivo</li>
+        <li>Diseño y ensamblaje</li>
+        <li>Pruebas y presentación</li>
+      </ul>
+      <div class="section-gallery">
+        <div class="img-slot"><img src="" alt="Imagen 1 - Proyecto final"></div>
+        <div class="img-slot"><img src="" alt="Imagen 2 - Proyecto final"></div>
+        <div class="img-slot"><img src="" alt="Imagen 3 - Proyecto final"></div>
+        <div class="img-slot"><img src="" alt="Imagen 4 - Proyecto final"></div>
+        <div class="img-slot"><img src="" alt="Imagen 5 - Proyecto final"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    function showSection(sectionId) {
+      // Ocultar todas las secciones
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      
+      // Mostrar la sección seleccionada
+      const activeSection = document.getElementById(sectionId);
+      if (activeSection) {
+        activeSection.classList.add('active');
+        activeSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+    
+    // Mostrar home al cargar la página
+    window.addEventListener('DOMContentLoaded', () => {
+      showSection('home');
+    });
+  </script>
+</body>
+</html>

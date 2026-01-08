@@ -1,0 +1,124 @@
+/* ===============
+   Estilos mejorados para lecciones
+   =============== */
+
+/* Intro destacada */
+.lesson-intro {
+    width: 85%;
+    max-width: 850px;
+    margin: 1.5em auto;
+    padding: 1.2em 1.8em;
+    background: linear-gradient(135deg, hsla(var(--primary), 0.08), hsla(var(--primary), 0.02));
+    border-left: 4px solid hsl(var(--primary));
+    border-radius: 0.5em;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.intro-highlight {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: hsl(var(--text-primary));
+    margin: 0;
+}
+
+.intro-highlight strong {
+    color: hsl(var(--primary));
+    font-weight: 700;
+}
+
+/* Contenido de lección */
+.lesson-content {
+    width: 85%;
+    max-width: 850px;
+    margin: 1.8em auto;
+}
+
+.lesson-content h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.6em;
+    color: hsl(var(--text-primary));
+    border-bottom: 2px solid hsla(var(--primary), 0.3);
+    padding-bottom: 0.4em;
+}
+
+.lesson-content > p {
+    margin-bottom: 1em;
+    line-height: 1.6;
+}
+
+/* Lista de componentes */
+.components-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 0.7em;
+}
+
+.components-list li {
+    padding: 0.6em 1em;
+    background-color: hsl(var(--white));
+    border: 1px solid hsla(var(--primary), 0.25);
+    border-radius: 0.4em;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.components-list li:hover {
+    background-color: hsla(var(--primary), 0.05);
+    border-color: hsla(var(--primary), 0.5);
+    transform: translateX(3px);
+}
+
+.component-qty {
+    display: inline-block;
+    min-width: 2.2em;
+    font-weight: 700;
+    color: hsl(var(--primary));
+    margin-right: 0.6em;
+    font-family: var(--font-heading);
+}
+
+/* Sección de reglas */
+.rules-section {
+    background: linear-gradient(135deg, hsla(10, 80%, 95%, 1), hsla(10, 70%, 98%, 1));
+    border: 2px solid hsla(10, 60%, 65%, 0.4);
+    border-radius: 0.75em;
+    padding: 1.5em 2em;
+    margin-top: 2em;
+}
+
+.rules-section h3 {
+    color: hsla(10, 70%, 40%, 1);
+    border-bottom-color: hsla(10, 60%, 65%, 0.5);
+}
+
+.rules-list {
+    list-style: none;
+    padding: 0;
+}
+
+.rules-list li {
+    padding: 0.8em 0;
+    padding-left: 1.8em;
+    position: relative;
+    line-height: 1.6;
+    border-bottom: 1px solid hsla(10, 60%, 80%, 0.3);
+}
+
+.rules-list li:last-child {
+    border-bottom: none;
+}
+
+.rules-list li::before {
+    content: "⚡";
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+}
+
+.rules-list strong {
+    color: hsla(10, 70%, 35%, 1);
+    font-weight: 700;
+}
