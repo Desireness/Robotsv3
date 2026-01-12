@@ -191,7 +191,7 @@
       
       <div class="lesson-intro">
         <p class="intro-highlight">
-          <strong>Proyecto 2 - Servo de 180 grados</strong>
+          <strong>Proyectos de motores</strong>
         </p>
       </div>
 
@@ -203,14 +203,117 @@
         <br>
         <br>
         <p> Usaremos la tarjeta de expansión "MO27.000484" </p>
+        <p>El motor M020.00941</p>
+        <p>y las baterías del microbit</p>
       </div>
 
       <div class="section-gallery">
-        <div class="img-slot"><img src="" alt="Imagen 1 - Motores servo"></div>
-        <div class="img-slot"><img src="" alt="Imagen 2 - Motores servo"></div>
-        <div class="img-slot"><img src="" alt="Imagen 3 - Motores servo"></div>
-        <div class="img-slot"><img src="" alt="Imagen 4 - Motores servo"></div>
-        <div class="img-slot"><img src="" alt="Imagen 5 - Motores servo"></div>
+        <div class="img-slot"><img src="images/Placaexpansión.webp" alt="Imagen 1 - Motores servo"></div>
+        <div class="img-slot"><img src="images/motores180.webp" alt="Imagen 2 - Motores servo"></div>
+        <div class="img-slot"><img src="images/bateriasmicrobit.webp" alt="Imagen 3 - Motores servo"></div>
+      </div>
+      <br>
+      <br>
+      <p>El resultado de este proyecto es que usemos los nuevos motores, en este caso que el motor lo conectemos bien
+      y que el motor gire de un lado a otro según los grados indicados.
+      </p>
+      <br>
+      <p></p>
+      
+      <div class="step-item">
+        <div class="step-image">
+          <img src="images/inicio.webp" alt="Paso 1">
+        </div>
+        <div class="step-text">
+          <p>En primer lugar tendremos que crear una variable, yo la he llamado valor</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-text">
+          <p>Luego crearemos un bucle que repita 17 veces el valor del pin a nuestra varriable y cambios este por 10</p>
+        </div>
+        <div class="step-image">
+          <img src="images/paso2.webp" alt="Paso 2">
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-image">
+          <img src="images/paso3.webp" alt="Paso 3">
+        </div>
+        <div class="step-text">
+          <p>Descripción del paso 3</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-text">
+          <p>Lo conectamos todo, y debería quedar así</p>
+        </div>
+        <div class="step-image">
+          <img src="images/final.webp" alt="Paso 4">
+         </div>
+       </div>
+
+      <hr style="margin: 3em 0; border: none; border-top: 2px solid hsla(237, 94%, 81%, 0.3);">
+
+      <div class="lesson-content">
+        <h3>📋 Segundo proyecto motores </h3>
+        <p class="project-description">
+          Controla uno de los motores servo (360 grados) para rotar en un sentido al 50% de velocidad durante 5 segundos, y luego en el sentido contrario al 50% de velocidad durante otros 5 segundos.
+        <br>
+        <br>
+        <p>Usaremos la tarjeta de expansión "MO20.00859"</p>
+        <p>El motor M020.00941</p>
+        <p>y las baterías del microbit</p>
+      </div>
+
+      <div class="section-gallery">
+        <div class="img-slot"><img src="images/Placaexpansión.webp" alt="Imagen 1 - Segundo proyecto"></div>
+        <div class="img-slot"><img src="images/motores360.webp" alt="Imagen 2 - Segundo proyecto"></div>
+        <div class="img-slot"><img src="images/bateriasmicrobit.webp" alt="Imagen 3 - Segundo proyecto"></div>
+      </div>
+      <br>
+      <br>
+      <p>El resultado del proyecto es bastante similar al anterior y simplemente es para cambiar el tipo de motor y su control.</p>
+      <br>
+      <p></p>
+
+      <div class="step-item">
+        <div class="step-image">
+          <img src="images/pasoinicial.webp" alt="Paso 1 - Segundo proyecto">
+        </div>
+        <div class="step-text">
+          <p>En un bloque de "al iniciar" mostraremos que funciona</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-text">
+          <p>Luego, después de haber añadido la extensión de DF Robotics, queremos que rote el pin P0 en sentido cw al 50% durante 5 segundos</p>
+        </div>
+        <div class="step-image">
+          <img src="images/rotar1direc.webp" alt="Paso 2 - Segundo proyecto">
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-image">
+          <img src="images/rotar2direc.webp" alt="Paso 3 - Segundo proyecto">
+        </div>
+        <div class="step-text">
+          <p>Después, queremos que rote el pin P0 en sentido ccw al 50% durante 5 segundos</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-text">
+          <p>Conectamos todo de nuevo, y debería verse así</p>
+        </div>
+        <div class="step-image">
+          <img src="images/final2.webp" alt="Paso 4 - Segundo proyecto">
+        </div>
       </div>
     </section>
 
@@ -218,13 +321,11 @@
     <section id="lesson-leds" class="section">
       <button class="back-btn" onclick="showSection('home')">← Volver</button>
       <h2>LEDs</h2>
-      <p>Control básico y avanzado de LEDs:</p>
-      <ul>
-        <li>Encendido y parpadeo</li>
-        <li>Patrones de luz</li>
-        <li>Resistencias y seguridad</li>
-      </ul>
-      <div class="section-gallery">
+      <div style="text-align: center; padding: 4em 2em; background: linear-gradient(135deg, hsla(237, 94%, 81%, 0.08), hsla(237, 94%, 81%, 0.02)); border-radius: 1em; margin: 2em auto; max-width: 600px;">
+        <h3 style="font-size: 2rem; color: hsl(237, 94%, 81%); margin-bottom: 0.5em;">🚧 En Construcción 🚧</h3>
+        <p style="font-size: 1.2rem; color: hsl(0, 0%, 40%);">Esta lección estará disponible próximamente</p>
+      </div>
+      <div class="section-gallery" style="display: none;">
         <div class="img-slot"><img src="" alt="Imagen 1 - LEDs"></div>
         <div class="img-slot"><img src="" alt="Imagen 2 - LEDs"></div>
         <div class="img-slot"><img src="" alt="Imagen 3 - LEDs"></div>
@@ -237,13 +338,11 @@
     <section id="lesson-switch" class="section">
       <button class="back-btn" onclick="showSection('home')">← Volver</button>
       <h2>Switch con sensor</h2>
-      <p>Lectura de entradas digitales:</p>
-      <ul>
-        <li>Pull-up/Pull-down</li>
-        <li>Rebote (debounce)</li>
-        <li>Acciones según estado</li>
-      </ul>
-      <div class="section-gallery">
+      <div style="text-align: center; padding: 4em 2em; background: linear-gradient(135deg, hsla(237, 94%, 81%, 0.08), hsla(237, 94%, 81%, 0.02)); border-radius: 1em; margin: 2em auto; max-width: 600px;">
+        <h3 style="font-size: 2rem; color: hsl(237, 94%, 81%); margin-bottom: 0.5em;">🚧 En Construcción 🚧</h3>
+        <p style="font-size: 1.2rem; color: hsl(0, 0%, 40%);">Esta lección estará disponible próximamente</p>
+      </div>
+      <div class="section-gallery" style="display: none;">
         <div class="img-slot"><img src="" alt="Imagen 1 - Switch con sensor"></div>
         <div class="img-slot"><img src="" alt="Imagen 2 - Switch con sensor"></div>
         <div class="img-slot"><img src="" alt="Imagen 3 - Switch con sensor"></div>
@@ -256,13 +355,11 @@
     <section id="lesson-photoled" class="section">
       <button class="back-btn" onclick="showSection('home')">← Volver</button>
       <h2>LED con fotosensor</h2>
-      <p>Control de brillo según la luz ambiente:</p>
-      <ul>
-        <li>Lectura analógica del LDR</li>
-        <li>Mapeo de valores a PWM</li>
-        <li>Filtrado de ruido</li>
-      </ul>
-      <div class="section-gallery">
+      <div style="text-align: center; padding: 4em 2em; background: linear-gradient(135deg, hsla(237, 94%, 81%, 0.08), hsla(237, 94%, 81%, 0.02)); border-radius: 1em; margin: 2em auto; max-width: 600px;">
+        <h3 style="font-size: 2rem; color: hsl(237, 94%, 81%); margin-bottom: 0.5em;">🚧 En Construcción 🚧</h3>
+        <p style="font-size: 1.2rem; color: hsl(0, 0%, 40%);">Esta lección estará disponible próximamente</p>
+      </div>
+      <div class="section-gallery" style="display: none;">
         <div class="img-slot"><img src="" alt="Imagen 1 - LED con fotosensor"></div>
         <div class="img-slot"><img src="" alt="Imagen 2 - LED con fotosensor"></div>
         <div class="img-slot"><img src="" alt="Imagen 3 - LED con fotosensor"></div>
@@ -275,13 +372,11 @@
     <section id="lesson-ultrasonic" class="section">
       <button class="back-btn" onclick="showSection('home')">← Volver</button>
       <h2>Distancia ultrasónica</h2>
-      <p>Medición con sensor HC-SR04:</p>
-      <ul>
-        <li>Trigger y Echo</li>
-        <li>Cálculo de distancia</li>
-        <li>Integración en proyectos</li>
-      </ul>
-      <div class="section-gallery">
+      <div style="text-align: center; padding: 4em 2em; background: linear-gradient(135deg, hsla(237, 94%, 81%, 0.08), hsla(237, 94%, 81%, 0.02)); border-radius: 1em; margin: 2em auto; max-width: 600px;">
+        <h3 style="font-size: 2rem; color: hsl(237, 94%, 81%); margin-bottom: 0.5em;">🚧 En Construcción 🚧</h3>
+        <p style="font-size: 1.2rem; color: hsl(0, 0%, 40%);">Esta lección estará disponible próximamente</p>
+      </div>
+      <div class="section-gallery" style="display: none;">
         <div class="img-slot"><img src="" alt="Imagen 1 - Distancia ultrasónica"></div>
         <div class="img-slot"><img src="" alt="Imagen 2 - Distancia ultrasónica"></div>
         <div class="img-slot"><img src="" alt="Imagen 3 - Distancia ultrasónica"></div>
@@ -294,13 +389,11 @@
     <section id="lesson-soil" class="section">
       <button class="back-btn" onclick="showSection('home')">← Volver</button>
       <h2>Detección de suelo</h2>
-      <p>Lectura de humedad del suelo:</p>
-      <ul>
-        <li>Sensor capacitivo vs resistivo</li>
-        <li>Umbrales de riego</li>
-        <li>Alertas y acciones</li>
-      </ul>
-      <div class="section-gallery">
+      <div style="text-align: center; padding: 4em 2em; background: linear-gradient(135deg, hsla(237, 94%, 81%, 0.08), hsla(237, 94%, 81%, 0.02)); border-radius: 1em; margin: 2em auto; max-width: 600px;">
+        <h3 style="font-size: 2rem; color: hsl(237, 94%, 81%); margin-bottom: 0.5em;">🚧 En Construcción 🚧</h3>
+        <p style="font-size: 1.2rem; color: hsl(0, 0%, 40%);">Esta lección estará disponible próximamente</p>
+      </div>
+      <div class="section-gallery" style="display: none;">
         <div class="img-slot"><img src="" alt="Imagen 1 - Detección de suelo"></div>
         <div class="img-slot"><img src="" alt="Imagen 2 - Detección de suelo"></div>
         <div class="img-slot"><img src="" alt="Imagen 3 - Detección de suelo"></div>
@@ -313,13 +406,11 @@
     <section id="lesson-temperature" class="section">
       <button class="back-btn" onclick="showSection('home')">← Volver</button>
       <h2>Detección de temperatura</h2>
-      <p>Medición con sensores (ej. LM35/DS18B20):</p>
-      <ul>
-        <li>Lectura y conversión</li>
-        <li>Promedios y estabilidad</li>
-        <li>Visualización de datos</li>
-      </ul>
-      <div class="section-gallery">
+      <div style="text-align: center; padding: 4em 2em; background: linear-gradient(135deg, hsla(237, 94%, 81%, 0.08), hsla(237, 94%, 81%, 0.02)); border-radius: 1em; margin: 2em auto; max-width: 600px;">
+        <h3 style="font-size: 2rem; color: hsl(237, 94%, 81%); margin-bottom: 0.5em;">🚧 En Construcción 🚧</h3>
+        <p style="font-size: 1.2rem; color: hsl(0, 0%, 40%);">Esta lección estará disponible próximamente</p>
+      </div>
+      <div class="section-gallery" style="display: none;">
         <div class="img-slot"><img src="" alt="Imagen 1 - Detección de temperatura"></div>
         <div class="img-slot"><img src="" alt="Imagen 2 - Detección de temperatura"></div>
         <div class="img-slot"><img src="" alt="Imagen 3 - Detección de temperatura"></div>
@@ -332,13 +423,11 @@
     <section id="lesson-final" class="section">
       <button class="back-btn" onclick="showSection('home')">← Volver</button>
       <h2>Proyecto final</h2>
-      <p>Integra conocimientos en un proyecto completo:</p>
-      <ul>
-        <li>Definición del objetivo</li>
-        <li>Diseño y ensamblaje</li>
-        <li>Pruebas y presentación</li>
-      </ul>
-      <div class="section-gallery">
+      <div style="text-align: center; padding: 4em 2em; background: linear-gradient(135deg, hsla(237, 94%, 81%, 0.08), hsla(237, 94%, 81%, 0.02)); border-radius: 1em; margin: 2em auto; max-width: 600px;">
+        <h3 style="font-size: 2rem; color: hsl(237, 94%, 81%); margin-bottom: 0.5em;">🚧 En Construcción 🚧</h3>
+        <p style="font-size: 1.2rem; color: hsl(0, 0%, 40%);">Esta lección estará disponible próximamente</p>
+      </div>
+      <div class="section-gallery" style="display: none;">
         <div class="img-slot"><img src="" alt="Imagen 1 - Proyecto final"></div>
         <div class="img-slot"><img src="" alt="Imagen 2 - Proyecto final"></div>
         <div class="img-slot"><img src="" alt="Imagen 3 - Proyecto final"></div>
