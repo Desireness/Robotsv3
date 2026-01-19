@@ -321,34 +321,142 @@
     <section id="lesson-leds" class="section">
       <button class="back-btn" onclick="showSection('home')">← Volver</button>
       <h2>LEDs</h2>
-      <div style="text-align: center; padding: 4em 2em; background: linear-gradient(135deg, hsla(237, 94%, 81%, 0.08), hsla(237, 94%, 81%, 0.02)); border-radius: 1em; margin: 2em auto; max-width: 600px;">
-        <h3 style="font-size: 2rem; color: hsl(237, 94%, 81%); margin-bottom: 0.5em;">🚧 En Construcción 🚧</h3>
-        <p style="font-size: 1.2rem; color: hsl(0, 0%, 40%);">Esta lección estará disponible próximamente</p>
+      
+      <div class="lesson-intro">
+        <p class="intro-highlight">
+          <strong>Proyectos de LEDs</strong>
+        </p>
       </div>
-      <div class="section-gallery" style="display: none;">
-        <div class="img-slot"><img src="" alt="Imagen 1 - LEDs"></div>
-        <div class="img-slot"><img src="" alt="Imagen 2 - LEDs"></div>
-        <div class="img-slot"><img src="" alt="Imagen 3 - LEDs"></div>
-        <div class="img-slot"><img src="" alt="Imagen 4 - LEDs"></div>
-        <div class="img-slot"><img src="" alt="Imagen 5 - LEDs"></div>
+
+      <div class="lesson-content">
+        <h3>📋 Primer proyecto leds </h3>
+        <p class="project-description">
+          Control de tira LED RGB
+        </p>
+        <p class="project-description">
+          Proyecto de ejemplo: Establece el color de 7 cuentas LED en un gradiente arcoíris, con un brillo de 255, y controla las cuentas para desplazarse una unidad cada 0.1 segundos de manera cíclica, logrando un efecto de luz corriente.
+        </p>
+        <br>
+        <br>
+        <p> Usaremos la tarjeta de expansión "MO27.000484" </p>
+        <p>La tira LED RGB (M011.001844)</p>
+        <p>un cable auxiliar del pack Sensor Cables "M028.00135"</p>
+        <p>y las baterías del microbit</p>
       </div>
+
+      <div class="section-gallery">
+        <div class="img-slot"><img src="images/Placaexpansión.webp" alt="Imagen 1 - LEDs"></div>
+        <div class="img-slot"><img src="images/leds4.webp" alt="Imagen 2 - LEDs"></div>
+        <div class="img-slot"><img src="images/led5.webp" alt="Imagen 3 - LEDs" style="object-fit: contain;"></div>
+      </div>
+      <br>
+      <br>
+      <p>El resultado de este proyecto es que usemos la tira LED RGB, en este caso que las luces se muevan de manera continuando creando un efecto de luz corriente con colores de arcoíris.
+      </p>
+      <br>
+      <p></p>
+      
+      <div class="step-item">
+        <div class="step-image">
+          <img src="images/leds1.webp" alt="Paso 1">
+        </div>
+        <div class="step-text">
+          <p>Como en los motores, tendremos que localizar el pin donde lo hemos conectado, en este caso el Pin P0, añadiendo el brillo RBG de LEDs y el degradado</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-text">
+          <p>Y rotaremos los pixeles en 1 en bucle</p>
+        </div>
+        <div class="step-image">
+          <img src="images/leds2.webp" alt="Paso 2">
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-image">
+          <img src="images/leds3.webp" alt="Paso 3">
+        </div>
+        <div class="step-text">
+          <p>Así debería verse al finalizar</p>
+        </div>
+      </div>
+
     </section>
 
     <!-- Lección: Switch con sensor -->
     <section id="lesson-switch" class="section">
       <button class="back-btn" onclick="showSection('home')">← Volver</button>
       <h2>Switch con sensor</h2>
-      <div style="text-align: center; padding: 4em 2em; background: linear-gradient(135deg, hsla(237, 94%, 81%, 0.08), hsla(237, 94%, 81%, 0.02)); border-radius: 1em; margin: 2em auto; max-width: 600px;">
-        <h3 style="font-size: 2rem; color: hsl(237, 94%, 81%); margin-bottom: 0.5em;">🚧 En Construcción 🚧</h3>
-        <p style="font-size: 1.2rem; color: hsl(0, 0%, 40%);">Esta lección estará disponible próximamente</p>
+      
+      <div class="lesson-intro">
+        <p class="intro-highlight">
+          <strong>Proyectos con sensor de movimiento</strong>
+        </p>
       </div>
-      <div class="section-gallery" style="display: none;">
-        <div class="img-slot"><img src="" alt="Imagen 1 - Switch con sensor"></div>
-        <div class="img-slot"><img src="" alt="Imagen 2 - Switch con sensor"></div>
-        <div class="img-slot"><img src="" alt="Imagen 3 - Switch con sensor"></div>
-        <div class="img-slot"><img src="" alt="Imagen 4 - Switch con sensor"></div>
-        <div class="img-slot"><img src="" alt="Imagen 5 - Switch con sensor"></div>
+
+      <div class="lesson-content">
+        <h3>📋 Primer proyecto sensor PIR </h3>
+        <p class="project-description">
+          Cuando el sensor PIR (movimiento) detecta a una persona, el servo rota a 170 grados; cuando detecta que la persona se fue, el servo rota a 10 grados.
+        </p>
+        <br>
+        <br>
+        <p> Usaremos la tarjeta de expansión "MO27.000484" </p>
+        <p>El sensor PIR de movimiento</p>
+        <p>Un motor servo de 180°</p>
+        <p>y las baterías del microbit</p>
       </div>
+
+      <div class="section-gallery">
+        <div class="img-slot"><img src="images/Placaexpansión.webp" alt="Imagen 1 - Switch con sensor"></div>
+        <div class="img-slot"><img src="images/motores180.webp" alt="Imagen 2 - Switch con sensor"></div>
+        <div class="img-slot"><img src="images/bateriasmicrobit.webp" alt="Imagen 3 - Switch con sensor"></div>
+      </div>
+      <br>
+      <br>
+      <p>El resultado de este proyecto es que el servo cambie de posición automáticamente según detecte movimiento con el sensor PIR, logrando un sistema de automatización básica.
+      </p>
+      <br>
+      <p></p>
+      
+      <div class="step-item">
+        <div class="step-image">
+          <img src="images/inicio.webp" alt="Paso 1">
+        </div>
+        <div class="step-text">
+          <p>En primer lugar tendremos que crear una variable para leer el sensor PIR</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-text">
+          <p>Luego crearemos un bloque condicional que verifique si el sensor detecta movimiento</p>
+        </div>
+        <div class="step-image">
+          <img src="images/paso2.webp" alt="Paso 2">
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-image">
+          <img src="images/paso3.webp" alt="Paso 3">
+        </div>
+        <div class="step-text">
+          <p>Si detecta movimiento, el servo rotará a 170 grados</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-text">
+          <p>Si no detecta movimiento, el servo volverá a 10 grados</p>
+        </div>
+        <div class="step-image">
+          <img src="images/final.webp" alt="Paso 4">
+         </div>
+       </div>
+
     </section>
 
     <!-- Lección: LED con fotosensor -->
