@@ -412,7 +412,7 @@
       <div class="section-gallery">
         <div class="img-slot"><img src="images/Placaexpansión.webp" alt="Imagen 1 - Switch con sensor"></div>
         <div class="img-slot"><img src="images/motores180.webp" alt="Imagen 2 - Switch con sensor"></div>
-        <div class="img-slot"><img src="images/bateriasmicrobit.webp" alt="Imagen 3 - Switch con sensor"></div>
+        <div class="img-slot"><img src="images/sensor_PIR.webp" alt="Imagen 3 - Switch con sensor"></div>
       </div>
       <br>
       <br>
@@ -423,11 +423,11 @@
       
       <div class="step-item">
         <div class="step-image">
-          <img src="images/inicio.webp" alt="Paso 1">
+          <img src="images/sensorswitch1.webp" alt="Paso 1">
         </div>
         <div class="step-text">
           <p>En primer lugar tendremos que crear una variable para leer el sensor PIR</p>
-        </div>
+        </div>      
       </div>
 
       <div class="step-item">
@@ -435,45 +435,73 @@
           <p>Luego crearemos un bloque condicional que verifique si el sensor detecta movimiento</p>
         </div>
         <div class="step-image">
-          <img src="images/paso2.webp" alt="Paso 2">
+          <img src="images/sensorswitch2.webp" alt="Paso 2">
         </div>
       </div>
 
       <div class="step-item">
         <div class="step-image">
-          <img src="images/paso3.webp" alt="Paso 3">
+          <img src="images/finalsensorswitch.webp" alt="Paso 3">
         </div>
         <div class="step-text">
-          <p>Si detecta movimiento, el servo rotará a 170 grados</p>
+          <p>Así queda al final</p>
         </div>
       </div>
-
-      <div class="step-item">
-        <div class="step-text">
-          <p>Si no detecta movimiento, el servo volverá a 10 grados</p>
-        </div>
-        <div class="step-image">
-          <img src="images/final.webp" alt="Paso 4">
-         </div>
-       </div>
-
     </section>
 
     <!-- Lección: LED con fotosensor -->
     <section id="lesson-photoled" class="section">
       <button class="back-btn" onclick="showSection('home')">← Volver</button>
       <h2>LED con fotosensor</h2>
-      <div style="text-align: center; padding: 4em 2em; background: linear-gradient(135deg, hsla(237, 94%, 81%, 0.08), hsla(237, 94%, 81%, 0.02)); border-radius: 1em; margin: 2em auto; max-width: 600px;">
-        <h3 style="font-size: 2rem; color: hsl(237, 94%, 81%); margin-bottom: 0.5em;">🚧 En Construcción 🚧</h3>
-        <p style="font-size: 1.2rem; color: hsl(0, 0%, 40%);">Esta lección estará disponible próximamente</p>
+      <div class="lesson-intro">
+        <p class="intro-highlight">
+          <strong>Proyecto 6 - Lámpara controlada por luz</strong> Aprende a encender y apagar una tira RGB según la cantidad de luz ambiente medida por el fotosensor.
+        </p>
       </div>
-      <div class="section-gallery" style="display: none;">
-        <div class="img-slot"><img src="" alt="Imagen 1 - LED con fotosensor"></div>
-        <div class="img-slot"><img src="" alt="Imagen 2 - LED con fotosensor"></div>
-        <div class="img-slot"><img src="" alt="Imagen 3 - LED con fotosensor"></div>
-        <div class="img-slot"><img src="" alt="Imagen 4 - LED con fotosensor"></div>
-        <div class="img-slot"><img src="" alt="Imagen 5 - LED con fotosensor"></div>
+
+      <div class="lesson-content">
+        <h3>📋 Proyecto 6 - Lámpara controlada por luz</h3>
+        <p class="project-description">
+          Proyecto de ejemplo: Cuando el valor detectado por el fotosensor es mayor a 512 (simulando luz de día), la luz RGB se apaga; cuando es menor o igual a 512 (simulando oscuridad), la luz RGB se enciende.
+        </p>
+        <br>
+        <br>
+        <p>Usaremos la tarjeta de expansión "MO27.000484"</p>
+        <p>Un fotosensor (LDR) conectado a una entrada analógica</p>
+        <p>La tira LED RGB (M011.001844)</p>
+        <p>Un cable auxiliar del pack Sensor Cables "M028.00135"</p>
+        <p>y las baterías del microbit</p>
       </div>
+
+      <div class="section-gallery">
+        <div class="img-slot"><img src="images/Tarjeta Expansion.webp" alt="Imagen 1 - LED con fotosensor"></div>
+        <div class="img-slot"><img src="images/sensor_PIR.webp" alt="Imagen 2 - LED con fotosensor"></div>
+        <div class="img-slot"><img src="images/leds4.webp" alt="Imagen 3 - LED con fotosensor"></div>
+      </div>
+      <br>
+      <br>
+      <p>El resultado de este proyecto es que la tira LED funcione como una lámpara automática: se apaga con luz ambiente y se enciende cuando hay oscuridad.</p>
+      <br>
+      <p></p>
+
+      <div class="step-item">
+        <div class="step-image">
+          <img src="images/ledconsensor1.webp" alt="Paso 1 - LED con fotosensor">
+        </div>
+        <div class="step-text">
+          <p>Lee desde el pin 0 las luces led</p>
+        </div>      
+      </div>
+
+      <div class="step-item">
+        <div class="step-text">
+          <p>y detecta si la luz de ambiente es 0 (o sea, no hay luz), si es asi se apaga, si no, muestra rojo</p>
+        </div>
+        <div class="step-image">
+          <img src="images/ledconsensor2.webp" alt="Paso 2 - LED con fotosensor">
+        </div>
+      </div>
+
     </section>
 
     <!-- Lección: Distancia ultrasónica -->
