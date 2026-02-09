@@ -280,7 +280,7 @@
       <br>
       <p></p>
 
-      <div class="step-item">
+      <div class="step-item"> 
         <div class="step-image">
           <img src="images/pasoinicial.webp" alt="Paso 1 - Segundo proyecto">
         </div>
@@ -508,16 +508,51 @@
     <section id="lesson-ultrasonic" class="section">
       <button class="back-btn" onclick="showSection('home')">← Volver</button>
       <h2>Distancia ultrasónica</h2>
-      <div style="text-align: center; padding: 4em 2em; background: linear-gradient(135deg, hsla(237, 94%, 81%, 0.08), hsla(237, 94%, 81%, 0.02)); border-radius: 1em; margin: 2em auto; max-width: 600px;">
-        <h3 style="font-size: 2rem; color: hsl(237, 94%, 81%); margin-bottom: 0.5em;">🚧 En Construcción 🚧</h3>
-        <p style="font-size: 1.2rem; color: hsl(0, 0%, 40%);">Esta lección estará disponible próximamente</p>
+      <div class="lesson-intro">
+        <p class="intro-highlight">
+          <strong>Proyecto 7 - Medición de distancia</strong> <span> Al igual que el contador de pasos, esté medirá la distancia leída desde el sensor de ultrasonido.</span>
+        </p>
       </div>
-      <div class="section-gallery" style="display: none;">
-        <div class="img-slot"><img src="" alt="Imagen 1 - Distancia ultrasónica"></div>
-        <div class="img-slot"><img src="" alt="Imagen 2 - Distancia ultrasónica"></div>
-        <div class="img-slot"><img src="" alt="Imagen 3 - Distancia ultrasónica"></div>
-        <div class="img-slot"><img src="" alt="Imagen 4 - Distancia ultrasónica"></div>
-        <div class="img-slot"><img src="" alt="Imagen 5 - Distancia ultrasónica"></div>
+
+      <div class="lesson-content">
+        <h3>📋 Proyecto 7 - Medición de distancia</h3>
+        <p class="project-description">
+          Describe cómo se mide la distancia con el sensor ultrasónico y qué hará el proyecto.
+        </p>
+        <br>
+        <br>
+        <p>Tarjeta de expansión / módulo usado</p>
+        <p>Sensor ultrasónico (modelo)</p>
+        <p>Placeholder: Cableado / alimentación</p>
+      </div>
+
+      <div class="section-gallery">
+        <div class="img-slot"><img src="images/sensorultrasonido.webp" alt="Imagen 1 - Distancia ultrasónica"></div>
+        <div class="img-slot"><img src="images/Tarjeta Expansion.webp" alt="Imagen 2 - Distancia ultrasónica"></div>
+        <div class="img-slot"><img src="images/bateriasmicrobit.webp" alt="Imagen 3 - Distancia ultrasónica"></div>
+      </div>
+      <br>
+      <br>
+      <p>El resultado de este proyecto es que el microbit muestre la distancia medida por el sensor ultrasónico.</p>
+      <br>
+      <p></p>
+
+      <div class="step-item">
+        <div class="step-image">
+          <img src="images/sensorultrasonico1.webp" alt="Paso 1 - Distancia ultrasónica">
+        </div>
+        <div class="step-text">
+          <p>Iniciar una variable que servirá para almacenar la distancia medida</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-text">
+          <p>Fijar la variable con el valor leído por el sensor ultrasónico y mostrar ese número</p>
+        </div>
+        <div class="step-image">
+          <img src="images/sensorultrasonico2.webp" alt="Paso 2 - Distancia ultrasónica">
+        </div>
       </div>
     </section>
 
@@ -525,16 +560,52 @@
     <section id="lesson-soil" class="section">
       <button class="back-btn" onclick="showSection('home')">← Volver</button>
       <h2>Detección de suelo</h2>
-      <div style="text-align: center; padding: 4em 2em; background: linear-gradient(135deg, hsla(237, 94%, 81%, 0.08), hsla(237, 94%, 81%, 0.02)); border-radius: 1em; margin: 2em auto; max-width: 600px;">
-        <h3 style="font-size: 2rem; color: hsl(237, 94%, 81%); margin-bottom: 0.5em;">🚧 En Construcción 🚧</h3>
-        <p style="font-size: 1.2rem; color: hsl(0, 0%, 40%);">Esta lección estará disponible próximamente</p>
+      <div class="lesson-intro">
+        <p class="intro-highlight">
+          <strong>Proyecto 8 - Humedad del suelo</strong> Aprende a leer la humedad del suelo para proyectos como sistemas de riego automático o alertas de sequía.
+        </p>
       </div>
-      <div class="section-gallery" style="display: none;">
-        <div class="img-slot"><img src="" alt="Imagen 1 - Detección de suelo"></div>
-        <div class="img-slot"><img src="" alt="Imagen 2 - Detección de suelo"></div>
-        <div class="img-slot"><img src="" alt="Imagen 3 - Detección de suelo"></div>
-        <div class="img-slot"><img src="" alt="Imagen 4 - Detección de suelo"></div>
-        <div class="img-slot"><img src="" alt="Imagen 5 - Detección de suelo"></div>
+
+      <div class="lesson-content">
+        <h3>📋 Proyecto 8 - Humedad del suelo</h3>
+        <p class="project-description">
+          Proyecto de ejemplo: Leeremos el valor analógico del sensor de humedad y lo mostraremos en pantalla. Valores bajos indican suelo seco, valores altos indican suelo mojado.
+        </p>
+        <br>
+        <br>
+        <p>Usaremos la tarjeta de expansión "MO27.000484"</p>
+        <p>Un sensor de humedad del suelo conectado a una entrada analógica</p>
+        <p>Un cable auxiliar del pack Sensor Cables "M028.00135"</p>
+        <p>y las baterías del microbit</p>
+      </div>
+
+      <div class="section-gallery">
+        <div class="img-slot"><img src="images/Tarjeta Expansion.webp" alt="Imagen 1 - Detección de suelo"></div>
+        <div class="img-slot"><img src="images/sensorhumedad0.webp" alt="Imagen 2 - Detección de suelo"></div>
+        <div class="img-slot"><img src="images/bateriasmicrobit.webp" alt="Imagen 3 - Detección de suelo"></div>
+      </div>
+      <br>
+      <br>
+      <p>El resultado de este proyecto es que el sensor de humedad mida continuamente el nivel de agua en el suelo y muestre ese valor numérico.</p>
+      <br>
+      <p></p>
+
+      <div class="step-item">
+        <div class="step-image">
+          <img src="images/sensorultrasonico1.webp" alt="Paso 1 - Detección de suelo">
+        </div>
+        <div class="step-text">
+          <p>Iniciamos variable para almacenar la humedad del suelo</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-text">
+          <p>Fijar la variable con el valor leído por el sensor de humedad y mostrar ese número</p>
+        </div>
+        <div class="step-image">
+          <img src="images/sensorhumedad.webp" alt="Paso 2 - Detección de suelo">
+        </div>
       </div>
     </section>
 
@@ -542,16 +613,52 @@
     <section id="lesson-temperature" class="section">
       <button class="back-btn" onclick="showSection('home')">← Volver</button>
       <h2>Detección de temperatura</h2>
-      <div style="text-align: center; padding: 4em 2em; background: linear-gradient(135deg, hsla(237, 94%, 81%, 0.08), hsla(237, 94%, 81%, 0.02)); border-radius: 1em; margin: 2em auto; max-width: 600px;">
-        <h3 style="font-size: 2rem; color: hsl(237, 94%, 81%); margin-bottom: 0.5em;">🚧 En Construcción 🚧</h3>
-        <p style="font-size: 1.2rem; color: hsl(0, 0%, 40%);">Esta lección estará disponible próximamente</p>
+      <div class="lesson-intro">
+        <p class="intro-highlight">
+          <strong>Proyecto 9 - Detección de temperatura</strong> Aprende a leer la temperatura ambiente para proyectos como sistemas de climatización o alertas térmicas.
+        </p>
       </div>
-      <div class="section-gallery" style="display: none;">
-        <div class="img-slot"><img src="" alt="Imagen 1 - Detección de temperatura"></div>
-        <div class="img-slot"><img src="" alt="Imagen 2 - Detección de temperatura"></div>
-        <div class="img-slot"><img src="" alt="Imagen 3 - Detección de temperatura"></div>
-        <div class="img-slot"><img src="" alt="Imagen 4 - Detección de temperatura"></div>
-        <div class="img-slot"><img src="" alt="Imagen 5 - Detección de temperatura"></div>
+
+      <div class="lesson-content">
+        <h3>📋 Proyecto 9 - Detección de temperatura</h3>
+        <p class="project-description">
+          Proyecto de ejemplo: Leeremos el valor de temperatura usando el sensor térmico y lo mostraremos en pantalla en grados Celsius.
+        </p>
+        <br>
+        <br>
+        <p>Usaremos la tarjeta de expansión "MO27.000484"</p>
+        <p>Un sensor de temperatura conectado a una entrada analógica</p>
+        <p>Un cable auxiliar del pack Sensor Cables "M028.00135"</p>
+        <p>y las baterías del microbit</p>
+      </div>
+
+      <div class="section-gallery">
+        <div class="img-slot"><img src="images/sensortemperatura2.webp" alt="Imagen 1 - Detección de temperatura"></div>
+        <div class="img-slot"><img src="images/Tarjeta Expansion.webp" alt="Imagen 2 - Detección de temperatura"></div>
+        <div class="img-slot"><img src="images/bateriasmicrobit.webp" alt="Imagen 3 - Detección de temperatura"></div>
+      </div>
+      <br>
+      <br>
+      <p>El resultado de este proyecto es que el sensor de temperatura mida continuamente la temperatura ambiente y muestre ese valor numérico.</p>
+      <br>
+      <p></p>
+
+      <div class="step-item">
+        <div class="step-image">
+          <img src="images/sensorultrasonico1.webp" alt="Paso 1 - Detección de temperatura">
+        </div>
+        <div class="step-text">
+          <p>Iniciamos variable para almacenar la temperatura</p>
+        </div>
+      </div>
+
+      <div class="step-item">
+        <div class="step-text">
+          <p>Fijar la variable con el valor leído por el sensor de temperatura y mostrar ese número</p>
+        </div>
+        <div class="step-image">
+          <img src="images/sensortemperatura3.webp" alt="Paso 2 - Detección de temperatura">
+        </div>
       </div>
     </section>
 
