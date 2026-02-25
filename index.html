@@ -8,6 +8,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <style>
+    .project-slider{display:flex;align-items:center;justify-content:center;gap:1rem;margin:2em 0}
+    .slider-frame{width:70%;display:flex;justify-content:center}
+    #project1-img{max-width:100%;max-height:70vh;object-fit:contain;border-radius:.5rem;background:#fff}
+    .slider-btn{background:transparent;border:1px solid rgba(0,0,0,0.08);padding:.5rem 1rem;font-size:2rem;border-radius:.5rem;cursor:pointer}
+    .centered-text{text-align:center;color:#444}
+  </style>
 </head>
 <body>
   <!-- Navbar -->
@@ -38,7 +45,7 @@
       </a>
     </li>
     <li class="navbar-item flexbox-left">
-      <a class="navbar-item-inner flexbox-left">
+      <a class="navbar-item-inner flexbox-left" onclick="showSection('projects')" style="cursor: pointer;">
         <div class="navbar-item-inner-icon-wrapper flexbox">
           <ion-icon name="folder-open-outline"></ion-icon>
         </div>
@@ -135,6 +142,57 @@
           <div class="lesson-icon">🏆</div>
           <h3>Proyecto final</h3>
           <p>Integra todo en un proyecto completo</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección: Proyecto 1 -->
+    <section id="project-1" class="section">
+      <button class="back-btn" onclick="showSection('projects')">← Volver</button>
+      <h2>Proyecto 1</h2>
+      <p class="intro-highlight">Espacio para que expliques el Proyecto 1. Sustituye este texto por tu contenido.</p>
+
+      <div class="lesson-content">
+        <h3>Descripción</h3>
+        <p>Aquí puedes añadir pasos, instrucciones o imágenes relacionadas con el proyecto.</p>
+      </div>
+
+      <p class="centered-text">Coloca hasta 100 imágenes en <strong>images/</strong> nombradas 1.webp / 2.webp / ... (también se comprobarán .jpg/.png/.jpeg/.png).</p>
+
+      <div class="project-slider">
+        <button class="slider-btn prev" onclick="prevProject1Image()">‹</button>
+        <div class="slider-frame">
+          <img id="project1-img" src="" alt="Proyecto 1 imagen" />
+        </div>
+        <button class="slider-btn next" onclick="nextProject1Image()">›</button>
+      </div>
+    </section>
+
+    <!-- Sección Projects -->
+    <section id="projects" class="section">
+      <button class="back-btn" onclick="showSection('home')">← Volver</button>
+      <h2>Projects</h2>
+      <p class="centered-text">Explora los proyectos disponibles</p>
+      <div class="lessons-grid">
+        <div class="lesson-card" onclick="showSection('project-1')" style="cursor: pointer;">
+          <div class="lesson-icon">🖼️</div>
+          <h3>Proyecto 1</h3>
+        </div>
+        <div class="lesson-card">
+          <div class="lesson-icon">🖼️</div>
+          <h3>Proyecto 2</h3>
+        </div>
+        <div class="lesson-card">
+          <div class="lesson-icon">🖼️</div>
+          <h3>Proyecto 3</h3>
+        </div>
+        <div class="lesson-card">
+          <div class="lesson-icon">🖼️</div>
+          <h3>Proyecto 4</h3>
+        </div>
+        <div class="lesson-card">
+          <div class="lesson-icon">🖼️</div>
+          <h3>Proyecto 5</h3>
         </div>
       </div>
     </section>
@@ -700,7 +758,55 @@
     // Mostrar home al cargar la página
     window.addEventListener('DOMContentLoaded', () => {
       showSection('home');
+      initProject1Slider();
     });
+
+    // Proyecto 1 slider
+    let project1Images = [];
+    let project1Index = 0;
+
+    async function findExistingImage(folder, i, exts){
+      for (const ext of exts){
+        const url = `${folder}${i}.${ext}`;
+        const ok = await new Promise(resolve => {
+          const img = new Image();
+          img.onload = () => resolve(true);
+          img.onerror = () => resolve(false);
+          img.src = url;
+        });
+        if (ok) return url;
+      }
+      return null;
+    }
+
+    async function initProject1Slider(){
+      const folder = 'images/';
+      const exts = ['webp','jpg','png','jpeg'];
+      const max = 100;
+      const checks = [];
+      for (let i=1;i<=max;i++) checks.push(findExistingImage(folder,i,exts));
+      const results = await Promise.all(checks);
+      project1Images = results.filter(Boolean);
+      project1Index = 0;
+      updateProject1Image();
+    }
+
+    function updateProject1Image(){
+      const imgEl = document.getElementById('project1-img');
+      if (!imgEl) return;
+      if (project1Images.length === 0){
+        imgEl.src = '';
+        imgEl.alt = 'No hay imágenes en images_2/';
+        return;
+      }
+      if (project1Index < 0) project1Index = project1Images.length - 1;
+      if (project1Index >= project1Images.length) project1Index = 0;
+      imgEl.src = project1Images[project1Index];
+      imgEl.alt = `Proyecto 1 imagen ${project1Index+1}`;
+    }
+
+    function nextProject1Image(){ project1Index++; updateProject1Image(); }
+    function prevProject1Image(){ project1Index--; updateProject1Image(); }
   </script>
 </body>
 </html>
