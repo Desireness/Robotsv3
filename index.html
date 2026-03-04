@@ -166,6 +166,18 @@
         </div>
         <button class="slider-btn next" onclick="nextProject1Image()">›</button>
       </div>
+
+      <div class="lesson-content">
+        <h3>Código</h3>
+      </div>
+
+      <div class="project-slider">
+        <button class="slider-btn prev" onclick="prevProject1CodeImage()">‹</button>
+        <div class="slider-frame">
+          <img id="project1-code-img" src="" alt="Proyecto 1 código" />
+        </div>
+        <button class="slider-btn next" onclick="nextProject1CodeImage()">›</button>
+      </div>
     </section>
 
     <!-- Sección Projects -->
@@ -759,6 +771,7 @@
     window.addEventListener('DOMContentLoaded', () => {
       showSection('home');
       initProject1Slider();
+      initProject1CodeSlider();
     });
 
     // Proyecto 1 slider
@@ -807,6 +820,37 @@
 
     function nextProject1Image(){ project1Index++; updateProject1Image(); }
     function prevProject1Image(){ project1Index--; updateProject1Image(); }
+
+    // Proyecto 1 código slider
+    let project1CodeImages = [];
+    let project1CodeIndex = 0;
+
+    async function initProject1CodeSlider(){
+      project1CodeImages = [
+        'images/paso1prog.png',
+        'images/paso2prog.png',
+        'images/paso3prog.png'
+      ];
+      project1CodeIndex = 0;
+      updateProject1CodeImage();
+    }
+
+    function updateProject1CodeImage(){
+      const imgEl = document.getElementById('project1-code-img');
+      if (!imgEl) return;
+      if (project1CodeImages.length === 0){
+        imgEl.src = '';
+        imgEl.alt = 'No hay imágenes en images/projects/project1/';
+        return;
+      }
+      if (project1CodeIndex < 0) project1CodeIndex = project1CodeImages.length - 1;
+      if (project1CodeIndex >= project1CodeImages.length) project1CodeIndex = 0;
+      imgEl.src = project1CodeImages[project1CodeIndex];
+      imgEl.alt = `Proyecto 1 código ${project1CodeIndex+1}`;
+    }
+
+    function nextProject1CodeImage(){ project1CodeIndex++; updateProject1CodeImage(); }
+    function prevProject1CodeImage(){ project1CodeIndex--; updateProject1CodeImage(); }
   </script>
 </body>
 </html>
