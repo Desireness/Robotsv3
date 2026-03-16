@@ -11,7 +11,7 @@
   <style>
     .project-slider{display:flex;align-items:center;justify-content:center;gap:1rem;margin:2em 0}
     .slider-frame{width:70%;display:flex;justify-content:center}
-    #project1-img{max-width:100%;max-height:70vh;object-fit:contain;border-radius:.5rem;background:#fff}
+    #project1-img,#project1-code-img,#project2-img,#project2-code-img{max-width:100%;max-height:70vh;object-fit:contain;border-radius:.5rem;background:#fff}
     .slider-btn{background:transparent;border:1px solid rgba(0,0,0,0.08);padding:.5rem 1rem;font-size:2rem;border-radius:.5rem;cursor:pointer}
     .centered-text{text-align:center;color:#444}
   </style>
@@ -150,7 +150,7 @@
     <section id="project-1" class="section">
       <button class="back-btn" onclick="showSection('projects')">← Volver</button>
       <h2>Proyecto 1</h2>
-      <p class="intro-highlight">Espacio para que expliques el Proyecto 1. Sustituye este texto por tu contenido.</p>
+    
 
       <div class="lesson-content">
         <h3>Brazo Robótico
@@ -180,6 +180,36 @@
       </div>
     </section>
 
+    <!-- Sección: Proyecto 2 -->
+    <section id="project-2" class="section">
+      <button class="back-btn" onclick="showSection('projects')">← Volver</button>
+      <h2>Proyecto 2</h2>
+
+      <div class="lesson-content">
+        <h3>moto</h3>
+      </div>
+
+      <div class="project-slider">
+        <button class="slider-btn prev" onclick="prevProject2Image()">‹</button>
+        <div class="slider-frame">
+          <img id="project2-img" src="" alt="Proyecto 2 imagen" />
+        </div>
+        <button class="slider-btn next" onclick="nextProject2Image()">›</button>
+      </div>
+
+      <div class="lesson-content">
+        <h3>Código</h3>
+      </div>
+
+      <div class="project-slider">
+        <button class="slider-btn prev" onclick="prevProject2CodeImage()">‹</button>
+        <div class="slider-frame">
+          <img id="project2-code-img" src="" alt="Proyecto 2 código" />
+        </div>
+        <button class="slider-btn next" onclick="nextProject2CodeImage()">›</button>
+      </div>
+    </section>
+
     <!-- Sección Projects -->
     <section id="projects" class="section">
       <button class="back-btn" onclick="showSection('home')">← Volver</button>
@@ -190,7 +220,7 @@
           <div class="lesson-icon">🖼️</div>
           <h3>Proyecto 1</h3>
         </div>
-        <div class="lesson-card">
+        <div class="lesson-card" onclick="showSection('project-2')" style="cursor: pointer;">
           <div class="lesson-icon">🖼️</div>
           <h3>Proyecto 2</h3>
         </div>
@@ -772,7 +802,17 @@
       showSection('home');
       initProject1Slider();
       initProject1CodeSlider();
+      initProject2Slider();
+      initProject2CodeSlider();
     });
+
+    function buildMotoImages(folder){
+      const images = [];
+      for (let i = 1; i <= 27; i++) {
+        images.push(`${folder}moto${i}.png`);
+      }
+      return images;
+    }
 
     // Proyecto 1 slider
     let project1Images = [];
@@ -851,6 +891,63 @@
 
     function nextProject1CodeImage(){ project1CodeIndex++; updateProject1CodeImage(); }
     function prevProject1CodeImage(){ project1CodeIndex--; updateProject1CodeImage(); }
+
+    // Proyecto 2 slider
+    let project2Images = [];
+    let project2Index = 0;
+
+    function initProject2Slider(){
+      project2Images = buildMotoImages('images_2/');
+      project2Index = 0;
+      updateProject2Image();
+    }
+
+    function updateProject2Image(){
+      const imgEl = document.getElementById('project2-img');
+      if (!imgEl) return;
+      if (project2Images.length === 0){
+        imgEl.src = '';
+        imgEl.alt = 'No hay imágenes para Proyecto 2';
+        return;
+      }
+      if (project2Index < 0) project2Index = project2Images.length - 1;
+      if (project2Index >= project2Images.length) project2Index = 0;
+      imgEl.src = project2Images[project2Index];
+      imgEl.alt = `Proyecto 2 imagen ${project2Index+1}`;
+    }
+
+    function nextProject2Image(){ project2Index++; updateProject2Image(); }
+    function prevProject2Image(){ project2Index--; updateProject2Image(); }
+
+    // Proyecto 2 código slider
+    let project2CodeImages = [];
+    let project2CodeIndex = 0;
+
+    function initProject2CodeSlider(){
+      project2CodeImages = [
+        'images_2/motoc_1.png',
+        'images_2/motoc_2.png'
+      ];
+      project2CodeIndex = 0;
+      updateProject2CodeImage();
+    }
+
+    function updateProject2CodeImage(){
+      const imgEl = document.getElementById('project2-code-img');
+      if (!imgEl) return;
+      if (project2CodeImages.length === 0){
+        imgEl.src = '';
+        imgEl.alt = 'No hay imágenes de código para Proyecto 2';
+        return;
+      }
+      if (project2CodeIndex < 0) project2CodeIndex = project2CodeImages.length - 1;
+      if (project2CodeIndex >= project2CodeImages.length) project2CodeIndex = 0;
+      imgEl.src = project2CodeImages[project2CodeIndex];
+      imgEl.alt = `Proyecto 2 código ${project2CodeIndex+1}`;
+    }
+
+    function nextProject2CodeImage(){ project2CodeIndex++; updateProject2CodeImage(); }
+    function prevProject2CodeImage(){ project2CodeIndex--; updateProject2CodeImage(); }
   </script>
 </body>
 </html>
